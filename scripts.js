@@ -1,4 +1,4 @@
-var APIkey = "2acb0255bcb904c483feee9f01634c8a";
+var APIkey = "api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=854920be9ab64c650c7f0d1a7d5c200c&units=imperial";
 var lastCitySearched;
 var storedCities;
 var cities = [];
@@ -20,7 +20,7 @@ $("#search-city").on("click", function (event) {
     var city = $("#city-input").val();
     console.log(city)
     var queryURL1 = 
-    "https://openweathermap.org/" + 
+    "https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=854920be9ab64c650c7f0d1a7d5c200c&units=imperial" + 
     city + 
     "&appid=" +
     APIkey;
@@ -56,7 +56,7 @@ $.ajax({
 function renderLastCityInfo() {
     $("#city-list").clear;
     var queryURL1 =
-    "https://openweathermap.org/" +
+    "https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=854920be9ab64c650c7f0d1a7d5c200c&units=imperial" +
     lastCity +
     "&appid" +
     APIkey;
@@ -86,7 +86,7 @@ function renderCityName(response) {
 
 function renderCityInfo(lat, lon) {
     var queryURL2 = 
-    "https://openweathermap.org/" +
+    "https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=854920be9ab64c650c7f0d1a7d5c200c&units=imperial" +
     lat +
     "&lon=" +
     lon +
@@ -147,7 +147,7 @@ function renderForecast(response) {
         
         var weatherIcon = $("<img>");
         var iconCode = day.weather[0].icon;
-        var iconUrl = "https://openweathermap.org/" + iconCode + ".png";
+        var iconUrl = "https://openweathermap.org/img/wn/10d@2x.png" + iconCode + ".png";
         weatherIcon.attr("src", iconUrl);
         dayCardBody.append(weatherIcon);
 
