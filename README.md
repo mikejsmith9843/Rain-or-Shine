@@ -21,6 +21,7 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
+![Screenshot 2024-07-31 130423](https://github.com/user-attachments/assets/aec6f388-02cc-46ec-9d22-1cd4ac87bea7)
 
 url=https://mikejsmith9843.github.io/Rain-or-Shine/
 
